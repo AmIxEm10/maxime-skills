@@ -1,0 +1,22 @@
+{
+  "name": "maxime-skills",
+  "version": "1.0.0",
+  "description": "Collection complète de 143 skills pour Claude Code et Claude Desktop — skills personnels de Maxime + skills officiels Anthropic + skills techniques (IA/ML, langages, frameworks, DevOps, sécurité, etc.)",
+  "author": {
+    "name": "Maxime",
+    "url": "https://github.com/AmIxEm10"
+  },
+  "homepage": "https://github.com/AmIxEm10/maxime-skills",
+  "repository": "https://github.com/AmIxEm10/maxime-skills",
+  "keywords": [
+    "skills",
+    "claude-code",
+    "agent-skills",
+    "fitness",
+    "rapport",
+    "portfolio",
+    "game-design",
+    "chrome-extension"
+  ],
+  "license": "MIT"
+}
