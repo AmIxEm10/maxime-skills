@@ -1,6 +1,4 @@
 {
-  "$schema": "https://json.schemastore.org/claude-code-settings.json",
-  "_comment_usage": "Copie ce fichier vers .claude/settings.json à la racine de tes projets. Le hook SessionStart clone/met à jour maxime-skills au démarrage de chaque session Claude Code (y compris cloud/web).",
   "hooks": {
     "SessionStart": [
       {
@@ -8,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "if [ -d ~/.claude/skills/maxime-skills ]; then cd ~/.claude/skills/maxime-skills && git pull --quiet 2>/dev/null || true; else git clone --depth 1 --quiet https://github.com/AmIxEm10/maxime-skills.git ~/.claude/skills/maxime-skills 2>/dev/null || true; fi"
+            "command": "if [ ! -d ~/.claude/maxime-skills ]; then git clone --depth 1 -q https://github.com/AmIxEm10/maxime-skills.git ~/.claude/maxime-skills 2>/dev/null && cd ~/.claude/maxime-skills && bash install.sh --symlink --force >/dev/null 2>&1 || true; else cd ~/.claude/maxime-skills && git pull -q 2>/dev/null && bash install.sh --symlink --force >/dev/null 2>&1 || true; fi"
           }
         ]
       }
